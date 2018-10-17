@@ -17,7 +17,7 @@ public class User {
     private String password;
     private Role role;
 
-    public enum Role {ADMIN, CUSTOMER};
+    public enum Role {ADMIN, CUSTOMER}
 
     public User() {
     }

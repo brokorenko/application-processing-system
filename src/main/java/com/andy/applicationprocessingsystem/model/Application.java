@@ -9,15 +9,17 @@ import java.util.Date;
 @Entity
 public class Application {
 
+    public static String UNCHECKED = "UNCHECKED";
+    public static String REJECT = "REJECT";
+    public static String DONE = "DONE";
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String request;
     private Integer bid;
     private Date dueDate;
-    private String status = Status.UNCHECKED.toString();
-
-    public enum Status {DONE, REJECT, UNCHECKED}
+    private String status = UNCHECKED;
 
     public Application() {
     }

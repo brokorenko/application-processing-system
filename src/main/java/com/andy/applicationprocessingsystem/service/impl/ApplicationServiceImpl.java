@@ -26,18 +26,16 @@ public class ApplicationServiceImpl implements ApplicationService {
     @Override
     public void registerApplication(Application application) {
         applicationRepository.save(application);
-        Integer uncheckedCount = getCountInStatistics(Application.Status.UNCHECKED.toString());
-        setCountInStatistics(Application.Status.UNCHECKED.toString(), ++uncheckedCount);
+        Integer uncheckedCount = getCountInStatistics(Application.UNCHECKED);
+        setCountInStatistics(Application.UNCHECKED, ++uncheckedCount);
     }
 
     @Override
     public String checkApplicationStatus(Long id) {
         Optional<Application> application = applicationRepository.findById(id);
-        String status = "";
-        System.out.println(application);
+        String status = Application.UNCHECKED;
         if (application.isPresent()) {
             status = application.get().getStatus();
-            System.out.println(status);
         }
         return status;
     }
