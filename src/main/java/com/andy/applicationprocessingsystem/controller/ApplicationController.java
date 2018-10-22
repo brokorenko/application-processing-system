@@ -3,7 +3,6 @@ package com.andy.applicationprocessingsystem.controller;
 import com.andy.applicationprocessingsystem.model.Application;
 import com.andy.applicationprocessingsystem.model.Statistics;
 import com.andy.applicationprocessingsystem.service.ApplicationService;
-import com.andy.applicationprocessingsystem.service.impl.ApplicationServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,7 +12,7 @@ public class ApplicationController {
 
     private ApplicationService applicationService;
 
-    public ApplicationController(ApplicationServiceImpl applicationService) {
+    public ApplicationController(ApplicationService applicationService) {
         this.applicationService = applicationService;
     }
 
