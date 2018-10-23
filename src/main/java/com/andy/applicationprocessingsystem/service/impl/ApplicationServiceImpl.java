@@ -5,14 +5,14 @@ import com.andy.applicationprocessingsystem.model.Statistics;
 import com.andy.applicationprocessingsystem.repository.ApplicationRepository;
 import com.andy.applicationprocessingsystem.repository.StatisticsRepository;
 import com.andy.applicationprocessingsystem.service.ApplicationService;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class ApplicationServiceImpl implements ApplicationService {
 
     private ApplicationRepository applicationRepository;
